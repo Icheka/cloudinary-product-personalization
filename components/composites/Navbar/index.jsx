@@ -6,7 +6,7 @@ import { Routes } from '../../../configs/app';
 const Navbar = props => {
     return (
         <nav>
-            <div className={`flex flex-row justify-start items-end font-lighter pb-3 pt-2`}>
+            <div className={`flex flex-row justify-start items-end font-lighter pb-3 pt-2 ${props.className}`}>
                 <div>
                     <Link href={Routes.home}>
                         <img

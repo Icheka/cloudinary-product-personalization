@@ -7,7 +7,10 @@ module.exports = {
         blue: {
           deep: '#0E2F5A'
         }
-      }
+      },
+      backgroundColor: theme => ({
+        'orange': '#db631e'
+      })
     },    
   },
   variants: {
