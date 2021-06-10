@@ -1,6 +1,6 @@
 
 
-const FontPicker = ({ fonts, className, defaultHidden }) => {
+const FontPicker = ({ fonts, className, onChange }) => {
 
     const renderOptionElements = () => fonts.map(font => (
         <option value={font.value} selected={font.selected} hidden={font.hidden}>
@@ -9,8 +9,7 @@ const FontPicker = ({ fonts, className, defaultHidden }) => {
     ));
 
     return (
-        <select className={className}>
-            { defaultHidden && <option selected hidden={defaultHidden.isHidden} value={defaultHidden.value}>{ defaultHidden.title }</option> }
+        <select className={className} onChange={ e => onChange ? onChange(e) : null }>
             { renderOptionElements() }
         </select>
     );
