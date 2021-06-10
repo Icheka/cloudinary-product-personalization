@@ -40,17 +40,8 @@ export default function Home() {
     const [textOverlayFontSize, setTextOverlayFontSize] = useState(16);
     
     const setFontSize = e => {
-        e.currentTarget.value !== ''
-            ? 
-        (() => {
-            e.currentTarget.value === '1'
-                ?
-            setTextOverlayFontSize('2')
-                :
-            setTextOverlayFontSize(e.currentTarget.value)
-        })()
-        :
-        null;
+        if (e.currentTarget.value === '1') return setTextOverlayFontSize(2);
+        return setTextOverlayFontSize(e.currentTarget.value);
     };
 
     const [textOverlayPosition, setTextOverlayPosition] = useState({ x: 0, y: 0 });
